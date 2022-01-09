@@ -2,9 +2,12 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const debug = require('debug')('node-angular');
 const http = require('http');
 
+app.use(express.static(__dirname + '/dist/Zolera'));
+app.get('/*', function(req,res) {
+  res.sendFile(path.join(__dirname+ '/dist/Zolera/index.html'));
+});
 
   const normalizePort = val => {
     var port = parseInt(val, 10);
