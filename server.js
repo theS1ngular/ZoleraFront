@@ -1,5 +1,6 @@
+'use strict'
 const express = require('express');
-const app = require('../Api/app');
+const app = express();
 const path = require('path');
 const debug = require('debug')('node-angular');
 const http = require('http');
